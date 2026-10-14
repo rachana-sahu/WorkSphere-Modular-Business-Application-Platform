@@ -1,45 +1,24 @@
-# WorkSphere
+## WorkSphere — Unified Business Management Platform
 
-WorkSphere is an original business-application portfolio project. It is being
-built as a modular monolith: one React client, one FastAPI service, and one
-PostgreSQL database. The application is developed incrementally and does not
-claim production readiness or enterprise scale.
+WorkSphere is a full-stack business management platform designed to bring customer relationship management (CRM), project management, team communication, human resources (HR), and applicant tracking into one secure, centralized workspace.
 
-## Implemented scope (Milestones 1–8)
+Built with React, TypeScript, FastAPI, and PostgreSQL, WorkSphere enables teams to manage customers, track projects and tasks, collaborate through team channels, handle employee leave requests, and streamline recruitment.
 
-- React, TypeScript, and Vite frontend with an API readiness indicator.
-- FastAPI liveness and database-readiness endpoints.
-- PostgreSQL 17 for local development through Docker Compose.
-- SQLAlchemy workspace, user, and membership models with an Alembic migration.
-- Account registration/login using Argon2 password hashes and short-lived,
-  HttpOnly cookie sessions with CSRF protection; a separate bearer-token
-  endpoint is available to API clients.
-- Workspace membership checks and owner/admin permission gates enforced by
-  API dependencies.
-- A protected workspace view with login/register forms and a focused backend
-  and frontend test suite.
-- A workspace-scoped CRM vertical slice for companies, contacts, leads, lead
-  notes, and activity history, including search, filtering, pagination,
-  duplicate handling, and lead-stage updates.
-- An authenticated CRM interface with accessible create forms, loading and
-  empty states, search, stage filtering, pagination, and API error feedback.
-- Workspace-scoped projects with task assignment, priorities, due dates,
-  project/task statuses, comments, and activity history.
-- An authenticated project workspace with project/task search and filters,
-  assignment controls, due-date display, status updates, and task discussion.
-- Workspace-scoped team channels with five-second message polling and an
-  authenticated message composer.
-- An HR workspace for departments, synthetic employee profiles, and leave
-  request submission/review. HR endpoints are restricted to workspace owners
-  and admins.
-- An applicant-tracking workspace for job openings, candidates, applications,
-  stage transitions, and application status history.
-- A responsive Team screen that brings communication, people operations, and
-  hiring together, with loading, empty, and API error feedback.
-- An explicitly triggered project status-draft assistant behind a provider
-  interface, using a local deterministic mock with no external data transfer.
-- Request IDs, structured request logs, generic unexpected-error responses,
-  an Actions CI workflow, and a synthetic local read benchmark.
+## Key Features
+
+CRM: Manage companies, contacts, sales leads, notes, and activity history.
+
+Project Management: Organize projects, assign tasks, track priorities, manage deadlines, and collaborate through comments.
+
+Team Communication: Exchange messages through workspace-scoped channels.
+
+HR Management: Manage departments, employee profiles, and leave requests with role-based access controls.
+
+Applicant Tracking: Manage job openings, candidates, applications, recruitment stages, and status history.
+
+AI-Assisted Workflows: Generate project status drafts through a provider-based assistant with a local deterministic mock.
+
+Security & Reliability: Secure authentication, Argon2 password hashing, CSRF protection, workspace-level authorization, structured logging, request IDs, and automated tests.
 
 ## Repository structure
 
